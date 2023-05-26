@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🖌️✏️</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+    <div class="flex-container">
+        <div class="title">
+            <h1>Etch-A-Sketch</h1>
+            <div class="subtitle">
+                <div class="welcome">Welcome to Etch a Sketch!</div>
+                <div class="mode">Click to stop/start drawing</div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="board"></div>
+            <div class="buttons">
+                <input id="colorPicker" type="color" value="#333333" oninput="changeColor(this.value)"
+                    autocomplete="off" />
+                <button id="baseBtn" onclick="changeColor('black')">Black</button>
+                <button id="baseBtn" onclick="changeColor('ghostwhite')">Eraser</button>
+                <button id="randomBtn" onclick="changeColor('random')">Random</button>
+                <button id="reset" onclick="resetBoard()">Reset</button>
+
+            </div>
+            <div>
+                <div id="sizeValue" class="size-value">16 by 16</div>
+                <input id="sizeSlider" type="range" value="16" min="2" max="100" oninput="changeSize(this.value)"
+                    autocomplete="off" />
+            </div>
+        </div>
+
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
